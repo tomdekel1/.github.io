@@ -7,8 +7,10 @@
 }
 
 body {
-  padding-left: 30%;
-  padding-top: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   background: rgb(25, 25, 25);
 }
 
@@ -16,12 +18,13 @@ body {
   background: #e19797;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   border: 1px solid #000;
   width: 500px;
 }
 
 .board>div {
-  width: 50px;
+  /* width: 50px; */
   height: 50px;
   border: 1px solid #000;
   display: flex;
@@ -54,4 +57,14 @@ body {
     display: block;
   }
 
+}
+
+@media screen and (max-width: 1200px) {
+  .board {
+    width: 100vw;
+  }
+
+  .board>div {
+    height: 10vw;
+  }
 }
